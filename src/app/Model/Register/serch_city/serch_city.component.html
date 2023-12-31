@@ -1,0 +1,64 @@
+<button class="" type="button" (click)="toggleModal()">ثبت نام</button>
+<div
+  *ngIf="showModal"
+  class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+>
+  <div class="relative w-[500px] my-6 mx-auto max-w-3xl">
+    <!--content-->
+    <div
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
+    >
+      <!--header-->
+      <div
+        class="flex items-center justify-between p-2 border-b border-solid border-blueGray-200 rounded-t"
+      >
+        <span class="">ورود | ثبت‌نام</span>
+        <a href="">
+          <span class="text-2xl" (click)="toggleModal()">x</span>
+        </a>
+      </div>
+      <!--body-->
+      <div class="flex flex-col">
+        <!-- Text -->
+        <div
+          class="flex items-center text-lg font-semibold mt-3 justify-center"
+        >
+          <span>لطفا شماره موبایل خود را وارد کنید</span>
+        </div>
+        <!-- Mobile -->
+        <div class="flex flex-col p-2">
+          <div class="flex flex-col items-start">
+            <span>شماره موبایل</span>
+          </div>
+          <div class="mt-2 mb-3 border rounded-xl w-[480px] p-2 bg-[#e6ebf1]">
+            <input
+              class="bg-[#e6ebf1] text-left"
+              type="text"
+              placeholder="شماره موبایل خود را واردکنید "
+            />
+          </div>
+        </div>
+        <!-- buttom -->
+        <div class="flex flex-col p-2">
+          <div class="flex flex-col items-start">
+            <span
+              >ادامه این فرآیند به منزله پذیرفتن قوانین و مقررات یوتراوز است.
+            </span>
+          </div>
+          <div
+            class="mt-2 mb-3 border rounded-xl w-[480px] p-2 bg-[#e6ebf1] text-center"
+          >
+            <button class="text-gray-500">تائید و دریافت کد</button>
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <div class="flex w-[200px] items-center justify-center m-auto pb-3">
+        <button class="text-[#107eff] bg-[#e3f0ff] rounded-xl p-2">
+          ورود با رمز عبور
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>

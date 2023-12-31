@@ -1,0 +1,11 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.containerapp {
+  width: 1150px;
+  margin: auto;
+}
+input {
+  outline: none;
+}
