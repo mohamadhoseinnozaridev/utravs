@@ -13,6 +13,8 @@ import { Instgram_appComponent } from './components/footer/instgram_app/instgram
 import { Footer_hotelComponent } from './components/footer/footer_hotel/footer_hotel.component';
 import { RegisterComponent } from './Model/Register/Register.component';
 import { Serch_cityComponent } from './Model/Register/serch_city/serch_city.component';
+import { Hotel_serchComponent } from './page/hotel_main_page/hotel_serch/hotel_serch.component';
+import { Serch_CalendarComponent } from './Model/Register/serch_Calendar/serch_Calendar.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { Serch_cityComponent } from './Model/Register/serch_city/serch_city.comp
     Footer_hotelComponent,
     RegisterComponent,
     Serch_cityComponent,
+    Hotel_serchComponent,
+    Serch_CalendarComponent,
   ],
   imports: [
     BrowserModule,

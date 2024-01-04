@@ -1,0 +1,365 @@
+<!-- navbar -->
+<div class="bg-[#0075ff]">
+  <div class="containerapp">
+    <div class="text-white">
+      <div class="flex justify-between items-center">
+        <!-- Logonavbar -->
+        <div class="flex items-center gap-24">
+          <div class="w-[104px] h-[30px] mt-3 mb-3">
+            <img
+              class=""
+              src="../../../../assets/img/utravs-logo-footer.svg"
+              alt=""
+            />
+          </div>
+          <div class="flex gap-16">
+            <span>پرواز</span>
+            <span>قطار</span>
+            <span>هتل</span>
+          </div>
+        </div>
+        <!-- description_navbar -->
+        <div class="flex gap-5 text-sm font-medium mt-3 mb-3 text-white">
+          <div class="flex gap-2">
+            <span> تماس با ما</span>
+            <span class="border-l-2 border-gray-300"></span>
+            <span>1548</span>
+          </div>
+          <div class="flex gap-2">
+            <span>پیگیری خرید</span>
+          </div>
+          <div class="flex gap-2">
+            <span> ورود</span>
+            <span class="border-l-2 border-gray-300"></span>
+            <span>
+              <app-Register></app-Register>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- body -->
+<div class="bg-[#e6ebf1] p-2">
+  <div class="containerapp">
+    <!-- serch_city -->
+    <div class="border bg-white rounded-xl w-[1090px] h-[100px] p-2">
+      <div class="w-[100%] flex items-center gap-2">
+        <i class="fa fa-stop-circle text-[#2982ff] mt-[5px]"></i>
+        <span class="text-[#2982ff]">هتل داخلی</span>
+      </div>
+      <div class="flex mt-2 items-center justify-between px-1">
+        <div
+          class="relative border bg-[#e6ebf1] rounded-xl p-1 flex items-center gap-2 w-[420px] h-[45px]"
+        >
+          <i class="fa fa-map-marker text-gray-300"></i>
+          <input
+            class="bg-[#e6ebf1] w-[100%]"
+            type="text"
+            placeholder="شهر یا هتل موردنظر خود راانتخاب کنید "
+          />
+        </div>
+        <div
+          class="border bg-[#e6ebf1] rounded-xl p-1 flex items-center w-[420px] h-[45px] justify-center gap-10"
+        >
+          <div class="">
+            <i class="fa fa-calendar-alt"></i>
+            <span>پنج شنبه 6 دی </span>
+          </div>
+          <div class="">
+            <span>تاریخ خروج</span>
+          </div>
+        </div>
+        <div
+          class="text-[#ff6610] font-bold p-1 rounded-xl border-2 border-[#ff6610] w-[200px] h-[45px] flex items-center justify-center"
+        >
+          <button>جستجو</button>
+        </div>
+      </div>
+    </div>
+    <!-- detail_serch -->
+    <div class="containerapp">
+      <div class="flex gap-8 p-2">
+        <!-- Right -->
+        <div class="w-[350px] flex flex-col border bg-white rounded-xl">
+          <!-- part one -->
+          <div class="flex flex-col items-start px-2">
+            <span class="text-sm font-medium">فیلتر نتایج جستجو</span>
+            <span class="text-sm mt-2 font-medium text-gray-400"
+              >نمایش 250 هتل از 250 هتل</span
+            >
+          </div>
+          <div class="border-b-2 border-gray-300 p-2"></div>
+          <!-- part tow -->
+          <div class="flex flex-col items-start px-2">
+            <span class="text-base font-medium text-gray-400"
+              >محدوده قیمت
+            </span>
+            <div class="w-[100%]">
+              <input
+                class="w-[100%]"
+                type="range"
+                min="0"
+                max="1000"
+                step="1"
+                [(ngModel)]="price"
+                id="price-range"
+              />
+              <p>تومان: {{ price }}</p>
+            </div>
+          </div>
+          <div class="border-b-2 border-gray-300 p-2"></div>
+          <!-- part three -->
+          <div class="flex flex-col items-start px-2">
+            <div class="">
+              <span class="text-sm font-medium text-gray-400"
+                >براساس تعداد ستاره
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <input type="checkbox" [(ngModel)]="isChecked" id="my-checkbox" />
+              <label class="flex gap-3 mt-[10px]" for="my-checkbox"
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+              ></label>
+            </div>
+            <div class="flex items-center gap-3">
+              <input type="checkbox" [(ngModel)]="isChecked" id="my-checkbox" />
+              <label class="flex gap-3 mt-[10px]" for="my-checkbox"
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+              ></label>
+            </div>
+            <div class="flex items-center gap-3">
+              <input type="checkbox" [(ngModel)]="isChecked" id="my-checkbox" />
+              <label class="flex gap-3 mt-[10px]" for="my-checkbox"
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+              ></label>
+            </div>
+            <div class="flex items-center gap-3">
+              <input type="checkbox" [(ngModel)]="isChecked" id="my-checkbox" />
+              <label class="flex gap-3 mt-[10px]" for="my-checkbox"
+                ><i class="fa fa-star text-[#ffa721]"></i
+                ><i class="fa fa-star text-[#ffa721]"></i
+              ></label>
+            </div>
+            <div class="flex items-center gap-3">
+              <input type="checkbox" [(ngModel)]="isChecked" id="my-checkbox" />
+              <label class="flex" for="my-checkbox">
+                <span>بدون ستاره</span>
+              </label>
+            </div>
+          </div>
+          <div class="border-b-2 border-gray-300 p-2"></div>
+
+          <!-- part for -->
+          <div class="">
+            <div class="flex flex-col items-start px-2">
+              <div class="">
+                <span class="text-sm font-medium text-gray-400"
+                  >براساس تعداد ستاره
+                </span>
+              </div>
+              <div class="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  [(ngModel)]="isChecked"
+                  id="my-checkbox"
+                />
+                <label class="flex" for="my-checkbox">
+                  <span>هتل</span>
+                </label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  [(ngModel)]="isChecked"
+                  id="my-checkbox"
+                />
+                <label class="flex" for="my-checkbox">
+                  <span>هتل</span>
+                </label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  [(ngModel)]="isChecked"
+                  id="my-checkbox"
+                />
+                <label class="flex" for="my-checkbox">
+                  <span>هتل</span>
+                </label>
+              </div>
+              <div class="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  [(ngModel)]="isChecked"
+                  id="my-checkbox"
+                />
+                <label class="flex" for="my-checkbox">
+                  <span>هتل</span>
+                </label>
+              </div>
+            </div>
+            <!-- Left -->
+            <div class=""></div>
+          </div>
+        </div>
+        <!-- Left -->
+        <div class="flex flex-col">
+          <!-- Left_top -->
+          <div class="text-right">
+            <ul class="flex items-center gap-3 text-[#2b475a] text-sm">
+              <li class="flex gap-1">
+                <i class="fa fa-list-ul text-gray-400 mt-[6px]"></i>
+                <span>مرتب سازی بر اساس :</span>
+              </li>
+              <li>
+                <span>پیشنهادی</span>
+              </li>
+              <li>
+                <span>بیشترین ستاره</span>
+              </li>
+              <li>
+                <span>کمترین قیمت</span>
+              </li>
+              <li>
+                <span>بیشترین قیمت</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Left_down -->
+          <div
+            class="flex mt-8 border bg-white rounded-xl w-[700px] p-2"
+            *ngFor="let item of items"
+          >
+            <!-- Left_down_Right -->
+            <div class="flex gap-3">
+              <div class="w-[40%]">
+                <div
+                  id="carouselExampleIndicators{{ item.id }}"
+                  class="carousel slide"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      *ngFor="let image of item.image; index as i"
+                      type="button"
+                      [attr.data-bs-target]="
+                        '#carouselExampleIndicators' + item.id
+                      "
+                      [attr.data-bs-slide-to]="i"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner rounded-xl">
+                    <div class="carousel-item active">
+                      <img
+                        src="{{ item.image }}"
+                        class="d-block w-100 h-[240px]"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item" *ngFor="let image of item.image">
+                      <img
+                        [src]="image"
+                        class="d-block w-100 h-[240px]"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    [attr.data-bs-target]="
+                      '#carouselExampleIndicators' + item.id
+                    "
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    [attr.data-bs-target]="
+                      '#carouselExampleIndicators' + item.id
+                    "
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <div class="text-right text-sm items-center">
+                <ul>
+                  <li class="text-[#2b475a] font-bold gap-2 flex">
+                    <span> {{ item.title }}</span>
+                    <i class="fa fa-star text-[#ffa721] mt-[5px]"></i>
+                    <i class="fa fa-star text-[#ffa721] mt-[5px]"></i>
+                    <i class="fa fa-star text-[#ffa721] mt-[5px]"></i>
+                    <i class="fa fa-star text-[#ffa721] mt-[5px]"></i>
+                  </li>
+                  <li class="flex gap-2 mt-2">
+                    <i class="fa fa-map-marker text-gray-400 mt-[5px]"></i>
+                    <span>{{ item.description }}</span>
+                  </li>
+                  <li class="flex gap-8 mt-2">
+                    <span class="border bg-[#e6f2ff] rounded-lg p-1 font-medium"
+                      >لاکچری</span
+                    >
+                    <span class="border bg-[#e6f2ff] rounded-lg p-1 font-medium"
+                      >پیشنهاد ویژه</span
+                    >
+                  </li>
+                  <li class="mt-2">
+                    <span>نزدیک حرم</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Left_down_Left -->
+            <div
+              class="border bg-[#f6f7f8] w-[250px] rounded-xl p-3 flex flex-col"
+            >
+              <div class="text-sm text-right mt-2">
+                <span>شروع قیمت برای 3 شب</span>
+              </div>
+              <div class="flex gap-2 items-center justify-end">
+                <span class="line-through">{{ item.Discount }}</span>
+                <span class="border bg-[#e6f2ff] rounded-lg p-1">{{
+                  item.off
+                }}</span>
+              </div>
+              <div class="flex gap-1 justify-end items-center">
+                <span class="font-extrabold text-2xl text-[#38586e]">{{
+                  item.price
+                }}</span>
+                <span>تومان</span>
+              </div>
+              <div class="border bg-[#ff6610] p-2 text-center mt-5 rounded-xl">
+                <button class="text-white">مشاهده اتاق های</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
