@@ -1,1 +1,79 @@
-<p>serch_Calendar works!</p>
+<button class="" type="button" (click)="toggleModal()">پنج شنبه 6 دی</button>
+<div
+  *ngIf="showModal"
+  class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+>
+  <div class="relative w-auto my-6 mx-auto">
+    <!--content-->
+    <div
+      class="justify-center border-0 rounded-lg shadow-lg relative flex flex-col w-[1100px] bg-white outline-none focus:outline-none"
+    >
+      <!--header-->
+
+      <!--body-->
+      <div class="border bg-white rounded-xl p-2">
+        <div class="w-[100%] flex items-center gap-2">
+          <i class="fa fa-stop-circle text-[#2982ff] mt-[5px]"></i>
+          <span class="text-[#2982ff]">هتل داخلی</span>
+        </div>
+        <div class="flex mt-2 items-center justify-between px-1">
+          <div
+            class="relative border bg-[#e6ebf1] rounded-xl p-1 flex items-center gap-2 w-[420px] h-[45px]"
+          >
+            <i class="fa fa-map-marker text-gray-300"></i>
+            <input
+              (click)="ToogleText()"
+              class="bg-[#e6ebf1] w-[100%]"
+              type="text"
+              placeholder="شهر یا هتل موردنظر خود راانتخاب کنید "
+            />
+            <div
+              *ngIf="showText"
+              class="absolute w-[250px] h-[300px] border rounded-xl bg-white top-11 flex flex-col overflow-auto"
+            >
+              <div
+                class="flex items-center justify-between p-2"
+                *ngFor="let item of items"
+              >
+                <!-- Right -->
+                <div class="flex items-center gap-2">
+                  <i class="fa fa-map-marker text-green-500"></i>
+                  <div class="flex flex-col text-right">
+                    <span class="font-bold">{{ item.city }}</span>
+                    <span class="text-xs">{{ item.place }}</span>
+                  </div>
+                </div>
+                <!-- Left -->
+                <div class="text-xs flex">
+                  <span>{{ item.descrition }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border rounded-xl p-1 flex items-center w-[420px] h-[45px] justify-center gap-10"
+          >
+            <div class="">
+              <i class="fa fa-calendar-alt"></i>
+              <span>پنج شنبه 6 دی </span>
+            </div>
+            <div class="">
+              <span>تاریخ خروج</span>
+            </div>
+          </div>
+          <div
+            class="text-white font-bold p-1 rounded-xl border bg-[#ff6610] w-[200px] h-[45px] flex items-center justify-center"
+          >
+            <button>جستجو</button>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class=""></div>
+        <div class=""></div>
+      </div>
+      <!--footer-->
+    </div>
+  </div>
+</div>
+<div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>
