@@ -2,10 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.containerapp {
+/* .containerapp {
   width: 1150px;
   margin: auto;
-}
+} */
 input {
   outline: none;
 }
